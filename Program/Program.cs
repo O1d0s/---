@@ -2,7 +2,7 @@
 int a = int.Parse(Console.ReadLine());
 string[] arr = InputArray(a);
 string[] mas = new string[arr.Length];
-
+Search(arr,mas);
 Console.WriteLine("Данные первого массива: ");
 PrintArray(arr);
 Console.WriteLine("Данные перезаписанного массива: ");
@@ -24,4 +24,14 @@ void PrintArray(string[] array){
         Console.Write($"{array[i]} ");
     }
     Console.WriteLine();
+}
+
+void Search(string[] arr, string[] mas){
+    int chet = 0;
+    for (int i = 0; i < arr.Length; i++){
+        if(arr[i].Length <= 3){
+            mas[chet] = arr[i];
+            chet++;           
+        }
+    }
 }
