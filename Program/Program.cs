@@ -1,5 +1,8 @@
 ﻿Console.Write("Сколько слов хотите ввести: ");
 int a = int.Parse(Console.ReadLine());
+if (a<0){
+    Console.WriteLine("Длинна массива должна быть больше 0");
+}
 string[] arr = InputArray(a);
 string[] mas = new string[arr.Length];
 Search(arr,mas);
